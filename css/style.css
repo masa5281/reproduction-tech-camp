@@ -133,6 +133,10 @@ main .kv__upper .kv__content .kv__btn {
 main .kv__upper .kv__content .kv__btn-item:first-child {
   margin-right: 20px;
 }
+main .kv__upper .kv__content .kv__btn-item:last-child a::after {
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+}
 main .kv__upper .kv__content .kv__btn-item a {
   display: inline-block;
   position: relative;
@@ -142,6 +146,7 @@ main .kv__upper .kv__content .kv__btn-item a {
   font-size: 1.875rem;
   font-weight: 900;
   text-decoration: none;
+  transition: all 0.5s;
 }
 main .kv__upper .kv__content .kv__btn-item a::after {
   content: "";
@@ -156,10 +161,17 @@ main .kv__upper .kv__content .kv__btn-item a::after {
   border-top: 3px solid #fff;
   border-right: 3px solid #fff;
   transform: rotate(45deg);
+  transition: all 0.2s;
+}
+main .kv__upper .kv__content .kv__btn-item a:hover::after {
+  right: 4%;
 }
 main .kv__upper .kv__content .kv__btn-item--red {
   background-color: #EF2828;
   color: #fff;
+}
+main .kv__upper .kv__content .kv__btn-item--red:hover {
+  background-color: #F35757;
 }
 main .kv__upper .kv__content .kv__btn-item--white {
   background-color: #fff;
