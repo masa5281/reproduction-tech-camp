@@ -1,0 +1,18 @@
+/*------------------------------
+common
+------------------------------*/ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  // 参考サイトから抜粋
+  line-height: 1.15;
+}
+body {
+  // 5行目まで参考サイトから抜粋
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  font-family: 'Avenir', 'Roboto', "Noto Sans JP", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Meryo, "メイリオ", Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif !important;
+  font-weight: 500;
+  color: #121212 !important;
+}

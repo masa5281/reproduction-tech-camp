@@ -1,0 +1,103 @@
+/*------------------------------
+top
+------------------------------*/ 
+@use "var";
+
+main {
+  .kv {
+    position: relative;
+    &__upper {
+      height: 100vh;
+      background-color: #131313;
+      overflow-x: hidden; // はみ出た画像の左右を切り取る
+      .kv__slider{
+        display: flex;
+        width: 300%; // 画像3枚分の余白を確保
+        &-img {
+          animation: slide 30s linear infinite both;
+          margin-left: 0;
+          &:last-child {
+            margin-left: -2.95vw; //余白調整
+          }
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .kv__content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        max-width: 1060px;
+        width: 100%;
+        margin: 0 auto;
+        .kv__ttl {
+          margin-bottom: 20px;
+          img {
+            width: 100%;
+          }
+        }
+        .kv__btn {
+          display: flex;
+          justify-content: center;
+          &-item {
+            &:first-child {
+              margin-right: 20px;
+            }
+            a {
+              display: inline-block;
+              position: relative;
+              padding: 15px 60px;
+              border: 2px solid #fff;
+              border-radius: 50px;
+              font-size: 1.875rem;
+              font-weight: 900;
+              text-decoration: none;
+              &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 5%;
+                width: 13px;
+                height: 13px;
+                margin: auto 0;
+                border-top: 3px solid #fff;
+                border-right: 3px solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+            &--red {
+              background-color: var.$colorButtonRed;
+              color: #fff;
+            }
+            &--white {
+              background-color: #fff;
+              color: var.$colorButtonBlue;
+            }
+          }
+        }
+      }
+    }
+    &__lower {
+      background-color: #eee;
+      &-note {
+        color: #000;
+      }
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    // 少し左側にずらし、ループ時の繋ぎ目を滑らかにする
+    transform: translateX(-2%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/*------------------------------
+style
+------------------------------*/
+/*------------------------------
+var
+------------------------------*/
+/*------------------------------
+common
+------------------------------*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  font-family: "Avenir", "Roboto", "Noto Sans JP", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro W3", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Meryo, "メイリオ", Osaka, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif !important;
+  font-weight: 500;
+  color: #121212 !important;
+}
+
+/*------------------------------
+mixin
+------------------------------*/
+/*------------------------------
+style
+------------------------------*/
+/*------------------------------
+header
+------------------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 75px;
+  margin: 15px 20px 0;
+  padding: 0 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 1;
+  filter: drop-shadow(1px 1px 5px #999);
+}
+.header__logo {
+  width: 200px;
+}
+.header__logo img {
+  vertical-align: middle;
+}
+.header__nav-list {
+  display: flex;
+  align-items: center;
+}
+.header__nav-list .header__nav-item {
+  font-weight: 900;
+}
+.header__nav-list .header__nav-item:not(:last-child) {
+  margin-right: 15px;
+}
+.header__nav-list .header__nav-item a {
+  font-size: 1.0625rem;
+  color: #121212;
+  text-decoration: none;
+}
+.header__nav-list .header__nav-item--btn a {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #EF2828;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.7s;
+}
+.header__nav-list .header__nav-item--btn a:hover {
+  background-color: #F35757;
+}
+
+/*------------------------------
+style
+------------------------------*/
+/*------------------------------
+top
+------------------------------*/
+main .kv {
+  position: relative;
+}
+main .kv__upper {
+  height: 100vh;
+  background-color: #131313;
+  overflow-x: hidden;
+}
+main .kv__upper .kv__slider {
+  display: flex;
+  width: 300%;
+}
+main .kv__upper .kv__slider-img {
+  animation: slide 30s linear infinite both;
+  margin-left: 0;
+}
+main .kv__upper .kv__slider-img:last-child {
+  margin-left: -2.95vw;
+}
+main .kv__upper .kv__slider-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+main .kv__upper .kv__content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+}
+main .kv__upper .kv__content .kv__ttl {
+  margin-bottom: 20px;
+}
+main .kv__upper .kv__content .kv__ttl img {
+  width: 100%;
+}
+main .kv__upper .kv__content .kv__btn {
+  display: flex;
+  justify-content: center;
+}
+main .kv__upper .kv__content .kv__btn-item:first-child {
+  margin-right: 20px;
+}
+main .kv__upper .kv__content .kv__btn-item a {
+  display: inline-block;
+  position: relative;
+  padding: 15px 60px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+main .kv__upper .kv__content .kv__btn-item a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5%;
+  width: 13px;
+  height: 13px;
+  margin: auto 0;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+}
+main .kv__upper .kv__content .kv__btn-item--red {
+  background-color: #EF2828;
+  color: #fff;
+}
+main .kv__upper .kv__content .kv__btn-item--white {
+  background-color: #fff;
+  color: #12376A;
+}
+main .kv__lower {
+  background-color: #eee;
+}
+main .kv__lower-note {
+  color: #000;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-2%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=style.css.map */
