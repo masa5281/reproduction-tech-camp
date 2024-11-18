@@ -51,10 +51,12 @@ main {
             }
             a{
               &.kv__btn-item--red {
-                @include mixin.button-style(var.$red-btn-bg, var.$red-btn-txt-color, #fff, var.$red-btn-bg-hover);
+                @include mixin.button-style(var.$red-btn-bg, var.$red-btn-txt-color, #fff);
+                @include mixin.button-hover(var.$red-btn-bg-hover);
               }
               &.kv__btn-item--white {
                 @include mixin.button-style(var.$blue-btn-bg, var.$blue-btn-txt-color);
+                @include mixin.button-hover();
               }
             }
           }
@@ -63,14 +65,76 @@ main {
     }
     &__lower {
       padding: 10px 45px;
-      background-color: #eee;
       &-note {
         text-align: right;
         line-height: 1;
-        &--small {
-          color: var.$text-color-gray;
-          font-size: 0.625rem;
+      }
+    }
+  }
+  .courses {
+    padding: 60px 0 0;
+    background-color: #f6f6f6;
+    &__ttl {
+      font-weight: 900;
+      font-size: 2.5rem;
+      span {
+        font-size: 3rem;
+      }
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .courses__item {
+        max-width: 325px;
+        width: 100%;
+        background-color: #fff;
+        &-link {
+          display: inline-block;
+          width: 100%;
+          padding: 30px 25px 40px;
+          border-radius: 15px;
+          &-ttl {
+            background-color: #a93032;
+            color: #fff;
+            font-weight: 900;
+            font-size: 1.5rem;
+            span {
+              font-size: 1.125rem;
+            }
+          }
+          .courses_feature {
+            display: flex;
+            justify-content: center;
+            ul {
+              li {
+                display: flex;
+                img {
+                  width: 8%;
+                  margin-right: 10px;
+                }
+                p {
+                  margin: 0;
+                  font-size: 1.25rem;
+                  text-align: left;
+                }
+                &:not(:last-child) {
+                  p {
+                    margin-bottom: 10px;
+                  }
+                }
+              }
+            }
+          }
+          &-btn {
+          }
         }
+      }
+    }
+    &__note {
+      line-height: 1;
+      small {
+        font-size: 0.75rem;
       }
     }
   }

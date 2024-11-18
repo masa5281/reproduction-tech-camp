@@ -1,7 +1,9 @@
 /*------------------------------
 mixin
 ------------------------------*/ 
-@mixin button-style($bg-color, $text-color, $border-color: null, $hover-bg-color: null) {
+@use "var";
+
+@mixin button-style($bg-color, $text-color, $border-color: null) {
   display: inline-block;
   position: relative;
   padding: 15px 60px;
@@ -28,6 +30,9 @@ mixin
     transform: rotate(45deg);
     transition: all .2s;
   }
+}
+
+@mixin button-hover($hover-bg-color: null) {
   &:hover {
     background-color: $hover-bg-color;
     &::after {

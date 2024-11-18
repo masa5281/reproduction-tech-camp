@@ -6,6 +6,9 @@ style
 var
 ------------------------------*/
 /*------------------------------
+style
+------------------------------*/
+/*------------------------------
 common
 ------------------------------*/
 *, *::before, *::after {
@@ -24,6 +27,33 @@ body {
   color: #121212 !important;
 }
 
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.note {
+  color: #999999;
+  font-size: 0.625rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+/*------------------------------
+style
+------------------------------*/
 /*------------------------------
 mixin
 ------------------------------*/
@@ -204,15 +234,71 @@ main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--white:hover::after {
 }
 main .kv__lower {
   padding: 10px 45px;
-  background-color: #eee;
 }
 main .kv__lower-note {
   text-align: right;
   line-height: 1;
 }
-main .kv__lower-note--small {
-  color: #999999;
-  font-size: 0.625rem;
+main .courses {
+  padding: 60px 0 0;
+  background-color: #f6f6f6;
+}
+main .courses__ttl {
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+main .courses__ttl span {
+  font-size: 3rem;
+}
+main .courses__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+main .courses__list .courses__item {
+  max-width: 325px;
+  width: 100%;
+  background-color: #fff;
+}
+main .courses__list .courses__item-link {
+  display: inline-block;
+  width: 100%;
+  padding: 30px 25px 40px;
+  border-radius: 15px;
+}
+main .courses__list .courses__item-link-ttl {
+  background-color: #a93032;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+main .courses__list .courses__item-link-ttl span {
+  font-size: 1.125rem;
+}
+main .courses__list .courses__item-link .courses_feature {
+  display: flex;
+  justify-content: center;
+}
+main .courses__list .courses__item-link .courses_feature ul li {
+  display: flex;
+}
+main .courses__list .courses__item-link .courses_feature ul li img {
+  width: 8%;
+  margin-right: 10px;
+}
+main .courses__list .courses__item-link .courses_feature ul li p {
+  margin: 0;
+  font-size: 1.25rem;
+  text-align: left;
+}
+main .courses__list .courses__item-link .courses_feature ul li:not(:last-child) p {
+  margin-bottom: 10px;
+}
+main .courses__note {
+  line-height: 1;
+}
+main .courses__note small {
+  font-size: 0.75rem;
 }
 
 @keyframes slide {
