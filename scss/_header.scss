@@ -32,21 +32,27 @@ header
         &:not(:last-child) {
           margin-right: 15px;
         }
+        &:not(:last-child):hover {
+          a {
+            color: var.$text-color-blue;
+          }
+        }
         a {
           font-size: 1.0625rem;
-          color: var.$colorText;
+          color: var.$text-color-black;
           text-decoration: none;
+          transition: all .5s;
         }
         &--btn {
           a {
             display: inline-block;
             padding: 10px 30px;
-            background-color: var.$colorButtonRed;
+            background-color: var.$red-btn-bg;
             color: #fff;
             border-radius: 30px;
             transition: all .7s;
             &:hover {
-              background-color: var.$colorButtonRedHover;
+              background-color: var.$red-btn-bg-hover;
             }
           }
         }

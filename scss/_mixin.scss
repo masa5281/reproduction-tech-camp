@@ -1,6 +1,37 @@
 /*------------------------------
 mixin
 ------------------------------*/ 
-@mixin button {
-  
+@mixin button-style($bg-color, $text-color, $border-color: null, $hover-bg-color: null) {
+  display: inline-block;
+  position: relative;
+  padding: 15px 60px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all .5s;
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5%;
+    width: 13px;
+    height: 13px;
+    margin: auto 0;
+    border-top: 3px solid $border-color;
+    border-right: 3px solid $border-color;
+    transform: rotate(45deg);
+    transition: all .2s;
+  }
+  &:hover {
+    background-color: $hover-bg-color;
+    &::after {
+      right: 4%;
+    }
+  }
 }

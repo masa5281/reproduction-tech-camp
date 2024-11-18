@@ -64,21 +64,25 @@ header
 .header__nav-list .header__nav-item:not(:last-child) {
   margin-right: 15px;
 }
+.header__nav-list .header__nav-item:not(:last-child):hover a {
+  color: #12376a;
+}
 .header__nav-list .header__nav-item a {
   font-size: 1.0625rem;
   color: #121212;
   text-decoration: none;
+  transition: all 0.5s;
 }
 .header__nav-list .header__nav-item--btn a {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #EF2828;
+  background-color: #ef2828;
   color: #fff;
   border-radius: 30px;
   transition: all 0.7s;
 }
 .header__nav-list .header__nav-item--btn a:hover {
-  background-color: #F35757;
+  background-color: #f35757;
 }
 
 /*------------------------------
@@ -91,7 +95,7 @@ main .kv {
   position: relative;
 }
 main .kv__upper {
-  height: 100vh;
+  padding-bottom: 70px;
   background-color: #131313;
   overflow-x: hidden;
 }
@@ -115,7 +119,7 @@ main .kv__upper .kv__content {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 60px;
+  bottom: 95px;
   max-width: 1060px;
   width: 100%;
   margin: 0 auto;
@@ -133,22 +137,20 @@ main .kv__upper .kv__content .kv__btn {
 main .kv__upper .kv__content .kv__btn-item:first-child {
   margin-right: 20px;
 }
-main .kv__upper .kv__content .kv__btn-item:last-child a::after {
-  border-top: 3px solid #000;
-  border-right: 3px solid #000;
-}
-main .kv__upper .kv__content .kv__btn-item a {
+main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--red {
   display: inline-block;
   position: relative;
   padding: 15px 60px;
   border: 2px solid #fff;
   border-radius: 50px;
+  background-color: #ef2828;
+  color: #fff;
   font-size: 1.875rem;
   font-weight: 900;
   text-decoration: none;
   transition: all 0.5s;
 }
-main .kv__upper .kv__content .kv__btn-item a::after {
+main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--red::after {
   content: "";
   display: inline-block;
   position: absolute;
@@ -163,25 +165,54 @@ main .kv__upper .kv__content .kv__btn-item a::after {
   transform: rotate(45deg);
   transition: all 0.2s;
 }
-main .kv__upper .kv__content .kv__btn-item a:hover::after {
+main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--red:hover {
+  background-color: #f35757;
+}
+main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--red:hover::after {
   right: 4%;
 }
-main .kv__upper .kv__content .kv__btn-item--red {
-  background-color: #EF2828;
-  color: #fff;
-}
-main .kv__upper .kv__content .kv__btn-item--red:hover {
-  background-color: #F35757;
-}
-main .kv__upper .kv__content .kv__btn-item--white {
+main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--white {
+  display: inline-block;
+  position: relative;
+  padding: 15px 60px;
+  border: 2px solid #fff;
+  border-radius: 50px;
   background-color: #fff;
-  color: #12376A;
+  color: #12376a;
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--white::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5%;
+  width: 13px;
+  height: 13px;
+  margin: auto 0;
+  border-top: 3px solid;
+  border-right: 3px solid;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--white:hover::after {
+  right: 4%;
 }
 main .kv__lower {
+  padding: 10px 45px;
   background-color: #eee;
 }
 main .kv__lower-note {
-  color: #000;
+  text-align: right;
+  line-height: 1;
+}
+main .kv__lower-note--small {
+  color: #999999;
+  font-size: 0.625rem;
 }
 
 @keyframes slide {
