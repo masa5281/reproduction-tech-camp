@@ -3,15 +3,15 @@ mixin
 ------------------------------*/ 
 @use "var";
 
-@mixin button-style($bg-color, $text-color, $border-color: null) {
+@mixin button-style($bg-color, $text-color, $border-color: null, $padding-y: 15px, $padding-x: 60px, $font-size: 1.875rem) {
   display: inline-block;
   position: relative;
-  padding: 15px 60px;
+  padding: $padding-y $padding-x;
   border: 2px solid #fff;
   border-radius: 50px;
   background-color: $bg-color;
   color: $text-color;
-  font-size: 1.875rem;
+  font-size: $font-size;
   font-weight: 900;
   text-decoration: none;
   transition: all .5s;
@@ -22,8 +22,8 @@ mixin
     top: 0;
     bottom: 0;
     right: 5%;
-    width: 13px;
-    height: 13px;
+    width: 11px;
+    height: 11px;
     margin: auto 0;
     border-top: 3px solid $border-color;
     border-right: 3px solid $border-color;
@@ -38,5 +38,12 @@ mixin
     &::after {
       right: 4%;
     }
+  }
+}
+
+@mixin courses-button-hover($hover-bg-color: null) {
+  background-color: $hover-bg-color;
+  &::after {
+    right: 4%;
   }
 }

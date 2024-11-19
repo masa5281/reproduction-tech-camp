@@ -15,8 +15,8 @@ header
   padding: 0 40px;
   border-radius: 10px;
   background-color: #fff;
-  z-index: 1;
-  filter: drop-shadow(1px 1px 5px #999);
+  z-index: 10;
+  filter: drop-shadow(1px 1px 5px var.$shadow-color);
   &__logo {
     width: 200px;
     img {
