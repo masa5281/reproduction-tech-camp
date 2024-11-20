@@ -223,6 +223,127 @@ main {
       }
     }
   }
+  /*------------------------------
+  .skills
+  ------------------------------*/
+  .skills {
+    padding: 35px 0;
+    overflow-x: hidden;
+    &__ttl {
+      margin-bottom: 50px;
+      color: var.$primary-color;
+      font-weight: 800;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    &__list {
+      display: flex;
+      margin: 24px calc(50% - 50vw) 40px;
+      width: 100vw;
+      .slick-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 25px;
+        width: 40px;
+        height: 60px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0 0 5px var.$shadow-color;
+        opacity: 0.5;
+        cursor: pointer;
+        z-index: 1;
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 35%;
+          left: 35%;
+          width: 20px;
+          height: 20px;
+          border-top: 4px solid var.$primary-color;
+          border-left: 4px solid var.$primary-color;
+          transform: rotate(-45deg);
+        }
+      }
+      .slick-next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
+        width: 40px;
+        height: 60px;
+        border: none;
+        background-color: #fff;
+        box-shadow: 0 0 5px var.$shadow-color;
+        opacity: 0.5;
+        cursor: pointer;
+        &::after {
+          content: "";
+          display: inline-block;
+          position: absolute;
+          top: 35%;
+          right: 35%;
+          width: 20px;
+          height: 20px;
+          border-top: 4px solid var.$primary-color;
+          border-left: 4px solid var.$primary-color;
+          transform: rotate(135deg);
+        }
+      }
+      .draggable {
+        padding: 0 20px !important;
+      }
+      .slick-list {
+        .slick-track {
+          display: flex;
+          align-items: stretch;
+          .slick-slide {
+            height: auto;
+          }
+          .skills__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            max-width: 270px;
+            margin: 20px 5px;
+            padding: 80px 15px 30px;
+            box-shadow: 0px 3px 5px #ddd;
+            z-index: 1;
+            img {
+              position: absolute;
+              top: -20px;
+              max-width: 80px;
+              vertical-align: bottom;
+              z-index: 2;
+            }
+            p {
+              &:first-of-type {
+                margin-bottom: 10px;
+                color: var.$primary-color;
+                font-weight: 900;
+                font-size: 1.125rem;
+              }
+              &:last-of-type {
+                font-size: 0.875rem;
+                font-weight: 700;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__btn {
+      text-align: center;
+      &--blue {
+        @include mixin.button-style(var.$primary-color, #fff, #fff, 15px, 150px);
+        @include mixin.button-hover();
+      }
+    }
+  }
 }
 
 @keyframes slide {

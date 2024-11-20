@@ -38,6 +38,18 @@ body {
   font-size: 0.625rem;
 }
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s;
+}
+
+.fade-up.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
 ul {
   list-style: none;
 }
@@ -76,7 +88,7 @@ header
   border-radius: 10px;
   background-color: #fff;
   z-index: 10;
-  filter: drop-shadow(1px 1px 5px #999);
+  filter: drop-shadow(1px 1px 5px #bbb);
 }
 .header__logo {
   width: 200px;
@@ -124,6 +136,9 @@ top
 main {
   /*------------------------------
   .courses
+  ------------------------------*/
+  /*------------------------------
+  .skills
   ------------------------------*/
 }
 main .kv {
@@ -283,7 +298,7 @@ main .courses__list .courses__item {
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.5s;
-  filter: drop-shadow(1px 1px 8px #999);
+  filter: drop-shadow(1px 1px 8px #bbb);
 }
 main .courses__list .courses__item:hover {
   border: 5px solid #a93032;
@@ -376,7 +391,7 @@ main .courses__list .courses__item-link .courses_feature ul li:not(:last-child) 
   margin-bottom: 10px;
 }
 main .courses__list .courses__item-link .courses__btn {
-  filter: drop-shadow(1px 3px 3px #999);
+  filter: drop-shadow(1px 3px 3px #bbb);
 }
 main .courses__list .courses__item-link .courses__btn--red {
   display: inline-block;
@@ -469,6 +484,147 @@ main .courses__note {
 }
 main .courses__note small {
   font-size: 0.75rem;
+}
+main .skills {
+  padding: 35px 0;
+  overflow-x: hidden;
+}
+main .skills__ttl {
+  margin-bottom: 50px;
+  color: #12376a;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+}
+main .skills__list {
+  display: flex;
+  margin: 24px calc(50% - 50vw) 40px;
+  width: 100vw;
+}
+main .skills__list .slick-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  width: 40px;
+  height: 60px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px #bbb;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 1;
+}
+main .skills__list .slick-prev::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 20px;
+  height: 20px;
+  border-top: 4px solid #12376a;
+  border-left: 4px solid #12376a;
+  transform: rotate(-45deg);
+}
+main .skills__list .slick-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  width: 40px;
+  height: 60px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 0 5px #bbb;
+  opacity: 0.5;
+  cursor: pointer;
+}
+main .skills__list .slick-next::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 35%;
+  right: 35%;
+  width: 20px;
+  height: 20px;
+  border-top: 4px solid #12376a;
+  border-left: 4px solid #12376a;
+  transform: rotate(135deg);
+}
+main .skills__list .draggable {
+  padding: 0 20px !important;
+}
+main .skills__list .slick-list .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+main .skills__list .slick-list .slick-track .slick-slide {
+  height: auto;
+}
+main .skills__list .slick-list .slick-track .skills__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 270px;
+  margin: 20px 5px;
+  padding: 80px 15px 30px;
+  box-shadow: 0px 3px 5px #ddd;
+  z-index: 1;
+}
+main .skills__list .slick-list .slick-track .skills__item img {
+  position: absolute;
+  top: -20px;
+  max-width: 80px;
+  vertical-align: bottom;
+  z-index: 2;
+}
+main .skills__list .slick-list .slick-track .skills__item p:first-of-type {
+  margin-bottom: 10px;
+  color: #12376a;
+  font-weight: 900;
+  font-size: 1.125rem;
+}
+main .skills__list .slick-list .slick-track .skills__item p:last-of-type {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-align: left;
+}
+main .skills__btn {
+  text-align: center;
+}
+main .skills__btn--blue {
+  display: inline-block;
+  position: relative;
+  padding: 15px 150px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: #12376a;
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+main .skills__btn--blue::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5%;
+  width: 11px;
+  height: 11px;
+  margin: auto 0;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+main .skills__btn--blue:hover::after {
+  right: 4%;
 }
 
 @keyframes slide {
