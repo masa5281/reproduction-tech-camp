@@ -1,4 +1,4 @@
-// スライダー
+// スライダー（キービジュアル）
 $(function() {
   $(".skills__list").slick({
     autoplay: true,
@@ -15,9 +15,17 @@ $(function() {
   });
 });
 
-// スクロールでフェードイン
+// スクロールでフェードイン（身につくスキル）
 $(function() {
   $(".fade-up").on("inview", function() {
     $(this).addClass("is-inview");
   });
 }); 
+
+// アコーディオンメニュー（よくある質問）
+$(function() {
+  $(".faq__item").on("click", function() {
+    $(this).toggleClass("open");
+    $(this).find(".faq__answer").slideToggle(); //クリックされたliタグの中のddタグを操作
+  });
+});

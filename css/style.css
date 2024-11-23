@@ -88,7 +88,7 @@ header
   border-radius: 10px;
   background-color: #fff;
   z-index: 10;
-  filter: drop-shadow(1px 1px 5px #bbb);
+  filter: drop-shadow(1px 1px 5px #ccc);
 }
 .header__logo {
   width: 200px;
@@ -139,6 +139,9 @@ main {
   ------------------------------*/
   /*------------------------------
   .skills
+  ------------------------------*/
+  /*------------------------------
+  .faq
   ------------------------------*/
 }
 main .kv {
@@ -199,6 +202,7 @@ main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--red {
   font-weight: 900;
   text-decoration: none;
   transition: all 0.5s;
+  filter: drop-shadow(0 0 0 #ccc);
 }
 main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--red::after {
   content: "";
@@ -233,6 +237,7 @@ main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--white {
   font-weight: 900;
   text-decoration: none;
   transition: all 0.5s;
+  filter: drop-shadow(0 0 0 #ccc);
 }
 main .kv__upper .kv__content .kv__btn-item a.kv__btn-item--white::after {
   content: "";
@@ -298,7 +303,7 @@ main .courses__list .courses__item {
   border-radius: 15px;
   overflow: hidden;
   transition: all 0.5s;
-  filter: drop-shadow(1px 1px 8px #bbb);
+  filter: drop-shadow(1px 1px 8px #ccc);
 }
 main .courses__list .courses__item:hover {
   border: 5px solid #a93032;
@@ -390,9 +395,6 @@ main .courses__list .courses__item-link .courses_feature ul li p {
 main .courses__list .courses__item-link .courses_feature ul li:not(:last-child) p {
   margin-bottom: 10px;
 }
-main .courses__list .courses__item-link .courses__btn {
-  filter: drop-shadow(1px 3px 3px #bbb);
-}
 main .courses__list .courses__item-link .courses__btn--red {
   display: inline-block;
   position: relative;
@@ -405,6 +407,7 @@ main .courses__list .courses__item-link .courses__btn--red {
   font-weight: 900;
   text-decoration: none;
   transition: all 0.5s;
+  filter: drop-shadow(1px 3px 3px #ccc);
 }
 main .courses__list .courses__item-link .courses__btn--red::after {
   content: "";
@@ -433,6 +436,7 @@ main .courses__list .courses__item-link .courses__btn--blue {
   font-weight: 900;
   text-decoration: none;
   transition: all 0.5s;
+  filter: drop-shadow(1px 3px 3px #ccc);
 }
 main .courses__list .courses__item-link .courses__btn--blue::after {
   content: "";
@@ -461,6 +465,7 @@ main .courses__list .courses__item-link .courses__btn--rainbow {
   font-weight: 900;
   text-decoration: none;
   transition: all 0.5s;
+  filter: drop-shadow(1px 3px 3px #ccc);
   background-image: linear-gradient(90deg, rgb(248, 15, 15), rgb(207, 63, 245));
 }
 main .courses__list .courses__item-link .courses__btn--rainbow::after {
@@ -510,7 +515,7 @@ main .skills__list .slick-prev {
   height: 60px;
   border: none;
   background-color: #fff;
-  box-shadow: 0 0 5px #bbb;
+  box-shadow: 0 0 5px #ccc;
   opacity: 0.5;
   cursor: pointer;
   z-index: 1;
@@ -537,7 +542,7 @@ main .skills__list .slick-next {
   height: 60px;
   border: none;
   background-color: #fff;
-  box-shadow: 0 0 5px #bbb;
+  box-shadow: 0 0 5px #ccc;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -607,6 +612,7 @@ main .skills__btn--blue {
   font-weight: 900;
   text-decoration: none;
   transition: all 0.5s;
+  filter: drop-shadow(1px 3px 3px #ccc);
 }
 main .skills__btn--blue::after {
   content: "";
@@ -624,6 +630,115 @@ main .skills__btn--blue::after {
   transition: all 0.2s;
 }
 main .skills__btn--blue:hover::after {
+  right: 4%;
+}
+main .faq {
+  padding: 35px 0;
+}
+main .faq h3 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #12376a;
+}
+main .faq__list {
+  font-weight: 700;
+}
+main .faq__list .faq__item {
+  position: relative;
+  text-align: left;
+  box-shadow: 1px 1px 5px #ccc;
+}
+main .faq__list .faq__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+main .faq__list .faq__item:last-child {
+  margin-bottom: 20px;
+}
+main .faq__list .faq__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 4px solid transparent;
+  transition: all 0.4s;
+}
+main .faq__list .faq__item.open::before {
+  border-color: #12376a;
+}
+main .faq__list .faq__item.open .faq__pair .faq__question::after {
+  border-color: #12376a;
+  transform: rotate(225deg);
+}
+main .faq__list .faq__item .faq__pair .faq__question {
+  position: relative;
+  padding: 30px 0 25px 60px;
+  font-size: 1.25rem;
+}
+main .faq__list .faq__item .faq__pair .faq__question::before {
+  content: "Q";
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #12376a;
+  font-size: 1.75em;
+  transform: translateY(-50%);
+}
+main .faq__list .faq__item .faq__pair .faq__question::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 25px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-right: 4px solid #bbb;
+  border-bottom: 4px solid #bbb;
+  transform: translateY(-50%) rotate(45deg);
+  transition: all 0.4s;
+}
+main .faq__list .faq__item .faq__pair .faq__answer {
+  display: none;
+  padding: 0 25px 30px;
+}
+main .faq__list .faq__item .faq__pair .faq__answer p {
+  margin-bottom: 25px;
+}
+main .faq__list .faq__item .faq__pair .faq__answer small {
+  display: block;
+  text-align: right;
+}
+main .faq__btn--blue {
+  display: inline-block;
+  position: relative;
+  padding: 15px 150px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: #12376a;
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 0.5s;
+  filter: drop-shadow(1px 3px 3px #ccc);
+}
+main .faq__btn--blue::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5%;
+  width: 11px;
+  height: 11px;
+  margin: auto 0;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+main .faq__btn--blue:hover::after {
   right: 4%;
 }
 

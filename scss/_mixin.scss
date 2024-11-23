@@ -3,7 +3,7 @@ mixin
 ------------------------------*/ 
 @use "var";
 
-@mixin button-style($bg-color, $text-color, $border-color: null, $padding-y: 15px, $padding-x: 60px, $font-size: 1.875rem) {
+@mixin button-style($bg-color, $text-color, $border-color: null, $padding-y: 15px, $padding-x: 60px, $font-size: 1.875rem, $offset-x: 1px, $offset-y: 3px, $blur-radius: 3px) {
   display: inline-block;
   position: relative;
   padding: $padding-y $padding-x;
@@ -15,6 +15,7 @@ mixin
   font-weight: 900;
   text-decoration: none;
   transition: all .5s;
+  filter: drop-shadow($offset-x $offset-y $blur-radius var.$shadow-color);
   &::after {
     content: "";
     display: inline-block;
